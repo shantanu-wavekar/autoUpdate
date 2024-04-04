@@ -1,0 +1,21 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.autoupdater.app
+win:
+  target: nsis
+mac:
+  target: dmg
+  category: public.autoupdater.utilities
+portable:
+  unicode: false
+  artifactName: autoupdater.exe
+files:
+  - filter:
+      - '**/*'
+      - '!notes.txt'
+      - '!**/datainit.exe'
+extraResources:
+  - filter:
+      - datainit.exe
+electronVersion: 12.0.6
